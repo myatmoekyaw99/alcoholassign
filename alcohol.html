@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/5c08699f58.js" crossorigin="anonymous"></script>
+        
+        <title>Assignment 3</title>
+
+        <style>
+            body{
+                margin: 0px;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            #d1{
+                width: 100%;
+                height: 30px;
+                display: block;
+                text-transform: uppercase;
+                padding: 5px;
+                font-size: 12px;
+                
+            }
+            
+            .span1{
+                float: left;
+            }
+            .span2{
+                float: right;
+            }
+            .header{
+               
+                width: 100%;
+                height: 170px;
+                background-color: white;
+                margin: 5px;
+                /*outline: 10px solid white;*/
+            }
+            .alco{
+                text-align: center;
+                width: 30%;
+                margin-top: -10px;
+                font-family: Arial, Helvetica, sans-serif;
+                float: left;
+                /*background-color: blue;*/
+            }
+           .search{
+               width: 38%;
+               float: left;
+               margin-top: 35px;
+               margin-right: 10px;
+               /*background-color: red;*/
+               text-align:center;
+           }
+           input[type=text] {
+                width: 86%;
+                box-sizing: border-box;
+                border: 2px solid #ccc;
+                background-image: url('icons8-search-16.png');
+                background-position: right 5px; 
+                background-repeat: no-repeat;
+                padding: 5px 20px 5px 10px;
+            }
+           .call{
+               width:30%;
+               margin-top: 18px;
+               /*background-color: green;*/
+               text-indent: 70px;
+           }
+           .clearfix::after{
+                content: "";
+                clear: both;
+                display: table;
+            }
+           
+           .navigate{
+               clear: both;
+                background-color: #333;
+               
+           }
+            .u1 {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+                margin-left: 65px;
+                margin-right: 79px;
+            }
+           
+            li {
+                float: left;
+            }
+
+            .u1 a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            .u1 a:hover{
+                background-color: #111;
+            }
+
+            .u1 .active {
+                background-color: white;
+                color: red;
+            }
+            .section{
+                padding: 15px;
+                width: 88.45%;
+                position: absolute;
+                background-color: white;
+                margin-left: 79px;
+            }
+
+            .grid-img{
+                display: grid;
+                grid-template-columns:auto auto auto auto;
+                grid-gap: 10px;
+                justify-content: space-evenly;
+                background-color: white;
+                
+            }
+
+            .grid-img > div{
+                background-color: black;
+                text-align:left;
+            }
+            
+            .nav2{
+                width: 100%;
+                background-color: #f1f1f1;
+                margin-top: 15px;
+            }
+
+            .u2 {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            .nav2 a {
+                display: block;
+                color: black;
+                font-weight: bold;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            .u2 a:hover{
+                background-color: silver;
+            }
+
+            .six-grid{
+               margin: 10px;
+               background-color: white;
+            }
+        
+            .siximg{
+                background-color: white;
+                float: left;
+                width: 15.225%;
+                margin: 8px;
+                height: 400px;
+                border: 1px solid gray;
+                position: relative;
+                padding: 10px;
+            }
+
+            .imageButton{
+                text-align: center;
+                background-color: #b80505;
+                color: white;
+                font-weight: bold;
+                width: 100%;
+                height: 30px;
+                border: 0;
+            }
+            .top-right1 {
+                position: absolute;
+                top: 5px;
+                right: 10px;
+                width: 40px;
+                text-align: center;
+                background-color: #b80505;
+                color: white;
+            }
+
+            div.desc {
+                padding: 5px;
+                font-size: 15px;
+                height: 60px;
+            }
+            .top-right2 {
+                position: absolute;
+                top: 30px;
+                right: 10px;
+                width: 40px;
+                text-align: center;
+                background-color: lightgrey;
+            }
+
+            .top-left {
+                position: absolute;
+                top: 8px;
+                left: 10px;
+                color: #b80505;
+            }
+
+            .column {
+                float: left;
+                width: 33.1%;
+                padding: 20px;
+                border:1px solid black;
+                height: 350px;
+            }
+        
+            .left {
+                display:inline-block;
+                width:20%;
+            }
+            .right {
+            display:inline-block;
+            font-size: 12px;
+            width:70%;
+            height: 35px;
+            margin-top: 10px;
+            }
+
+            .footer {
+                left: 10%;
+                right: 10%;
+                background-color: black;
+                padding: 10px;
+                color: white;
+                margin: 0px;
+            }
+
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .footerc{
+                float: left;
+                padding: 20px;
+                height: 250px;
+                width: 100%;
+                margin-top: auto;
+                margin-bottom: auto;
+          }
+
+          .first {
+            width: 25%;
+          }
+        
+          .second{
+            width: 40%;
+          }
+
+          .middle {
+            width: 17.5%;
+            line-height: 0px;
+          }
+
+          .flogo{
+                margin-top: 0px ;
+                text-transform: uppercase;
+                text-align: center;
+                line-height: 0px;
+            }
+        
+        </style>
+    </head>
+    <body style="background-color: #f1f1f1;">
+        <div id="d1" class="clearfix">
+            <span class="span1">
+                <i class="fa fa-caret-right" style="color:red;"></i>
+                <a>Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa fa-caret-right" style="color: red;"></i>
+                <a>Sitemap</a>
+            </span>
+            <span class="span2">
+                <button style="border: 0;">SIGN OUT</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class='fas fa-user-tie'></i>
+                <a>A.Admin</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <select name="language" style="border: 0;">
+                <option value="English">LANGUAGE ENGLISH</option> 
+                </select>&nbsp;&nbsp;&nbsp;&nbsp;
+                <select name="payment" style="border: 0;">
+                <option value="USD">CURRENCY USD</option>
+                </select>
+            </span>
+        </div>
+    <!---Header---->
+        <div class="header">
+        
+            <div class="alco">
+                <h1 style="font-size: 40px;">ALCOHOLIC</h1>
+                <h6 style="font-size: 20px; margin-top: -35px; color: darkgoldenrod;">BEVERAGE STORE</h6>
+            </div>
+
+            <div class="search">
+                <input type="text" placeholder="Search..">
+            </div>
+        
+            <div class="call" style="float: right;">
+                <p style="font-size:19px;   font-weight: bold;">Call us now: 1(234) 567-9842</p>
+            </div>
+        
+            <!--Navigation-->
+            <div class="navigate">
+                <ul class="u1">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li style="float:right;"><a class="active" href="#about" >
+                        <i class='fas fa-shopping-cart' style='font-size:20px'></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <!---body section-->
+        <div class="section">
+            <div class="bigimg">
+                <div id="bigimg">
+                    <img src="download (6).jpg" width="100%" height="325px">
+                </div>
+            </div>
+        
+            <div class="grid-img">
+                <div id="gi1">
+                    <img src="glass5.jpg" height="185px">
+                    <h3 style="color: white; margin-left: 8px;">WHISKEY</h3>
+                </div>
+                <div id="gi2">
+                    <img src="glass1.jpg" height="185px">
+                    <h3 style="color: white; margin-left: 8px;">TECQUILA</h3>
+                </div>
+                <div id="gi3">
+                    <img src="glass3.jpg" height="185px">
+                    <h3 style="color: white; margin-left: 8px;">VODKA</h3>
+                </div>
+                <div id="gi4">
+                    <img src="glass4.jpg" height="185px">
+                    <h3 style="color: white; margin-left: 8px;">WINE</h3>
+                </div>
+            </div>
+
+            <div class="nav2">
+                <ul class="u2">
+                    <li><a href="#home">New Arrivals</a></li>
+                    <li><a href="#news">Popular</a></li>
+                    <li><a href="#contact">Best Seller</a></li>
+                </ul>
+            </div>
+
+            <div class="six-grid">
+                <div class="siximg">
+                    <img src="bottle0.jpg" width="100%" height="70%">
+                        <span class="top-right1">Sale!</span>
+                        <span class="top-right2">New!</span>
+                    
+                    <div class="top-left">-5%</div>
+                    <div class="desc">
+                        $62.69&nbsp;<span style="color: red;"><del><small>$65.99</small></del></span><br>
+                        1800 Tequila Silver
+                    </div>
+                    <button class="imageButton">Add To CART</button>
+                </div>
+                <div class="siximg">
+                    <img src="bottle2.jpg" width="100%" height="70%">
+                    <span class="top-right2">New!</span> 
+                    <div class="desc">
+                    $58.99<br>
+                    Beefeater Gin
+                    </div>
+                    <button class="imageButton">Add To CART</button>
+                </div>
+                <div class="siximg">
+                    <img src="bottle3.jpg" width="100%" height="70%">
+                    <span class="top-right1">Sale!</span>
+                        <span class="top-right2">New!</span>
+                    
+                    <div class="top-left">-8%</div>
+                    <div class="desc">
+                        $72.67&nbsp;<span style="color: red;"><del><small>$78.99</small></del></span><br>
+                        Bell's Christmas Decanter 1989
+                    </div>
+                    <button class="imageButton">Add To CART</button> 
+                </div>
+                <div class="siximg">
+                    <img src="bottle4.jpg" width="100%" height="70%">
+                        <span class="top-right2">New!</span>
+                    
+                    <div class="desc">
+                        $87.99<br>
+                        Benromach 30 Year Old...
+                    </div>
+                    <button class="imageButton">Add To CART</button>
+                </div>
+                <div class="siximg">
+                    <img src="bottle6.jpg" width="100%" height="70%">
+                    <span class="top-right2">New!</span>
+                    
+                    <div class="desc">
+                        $63.99<br>
+                        Chateau Branaire Ducru 2009
+                    </div>
+                    <button class="imageButton">Add To CART</button>
+                </div>
+                <div class="siximg">
+                    <img src="bottle7.jpg" width="100%" height="70%">
+                    <span class="top-right2">New!</span>
+                    
+                    <div class="desc">
+                        $56.87<br>
+                        Chateau Du Tariquet Classique
+                    </div>
+                    <button class="imageButton">Add To CART</button>
+                </div>
+          </div>
+        
+            <div class="clearfix six-grid">
+                <div class="siximg">
+                    <img src="bottle1.jpg" width="100%" height="70%">
+                    <span class="top-right2">New!</span>
+                    <div class="desc">
+                        $74.99<br>
+                        Hennessy Paradis Rare Cognac
+                    </div>
+                    <button class="imageButton">Add To CART</button>
+                </div>
+                <div class="siximg">
+                    <img src="bottle.jpg" width="100%" height="70%"> 
+                    <span class="top-right1">Sale!</span>
+                    <span class="top-right2">New!</span>    
+                    <div class="top-left">-12%</div>
+                    <div class="desc">
+                        $44.88&nbsp;<span style="color: red;"><del><small>$51.00</small></del></span><br>
+                        Hine Triomphe Grande...
+                    </div>
+                    <button class="imageButton">Add To CART</button>
+                </div>
+                <div class="siximg">
+                    <img src="bottle5.jpg" width="100%" height="70%">
+                    <span class="top-right1">Sale!</span>
+                    <span class="top-right2">New!</span>
+                    <div class="top-left">-5%</div>
+                    <div class="desc">
+                        $50.34&nbsp;<span style="color: red;"><del><small>$52.99</small></del></span><br>
+                        Jack Daniels Old No 7
+                    </div>
+                    <button class="imageButton">Add To CART</button>
+                </div>
+                <div class="siximg">
+                    <img src="bottle8.jpg" width="100%" height="70%">
+                    <span class="top-right1">Sale!</span>
+                    <span class="top-right2">New!</span>   
+                    <div class="top-left">-13%</div>
+                    <div class="desc">
+                        $74.81&nbsp;<span style="color: red;"><del><small>$85.99</small></del></span><br>
+                        Martell Cordon Bleu
+                    </div>
+                    <button class="imageButton">Add To CART</button>
+                </div>
+                <div class="siximg">
+                    <img src="bottle10.jpg" width="100%" height="70%"> 
+                    <span class="top-right2">New!</span>   
+                    <div class="desc">
+                        $69.87<br>
+                        The Kraken Black Spiced Rum
+                    </div>
+                    <button class="imageButton">Add To CART</button>
+                </div>
+                <div class="siximg">
+                <img src="bottle9.jpg" width="100%" height="70%">
+                <span class="top-right2">New!</span>
+                    <div class="desc">
+                        $73.99<br>
+                        Wild Turkey Kentucky Spirit
+                    </div>
+                    <button class="imageButton">Add To CART</button>
+                </div>
+            </div>
+            
+        <div class="row" style="margin-left: 10px;margin-right: 10px;padding-top: 10px;padding-bottom: 10px;">
+            <div class="column">
+                <h4>Follow us on facebook</h4>
+                <img src="facebook.jpg" width="80%" height="60%" style="border: 1px solid black;padding: 5px;">
+            </div>
+            <div class="column">
+                <div class="center">
+                    <div class="left">
+                        <i class="fa fa-truck" style="font-size:36px;color:red;"></i>
+                    </div>
+                    <div class="right">
+                        <h3>Lorem ipsum dolor sit</h3>
+                        <p>Lorem ipsum dolor sit amet conse ctecur voluptate velit esse cillum dollor.</p>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="left">
+                        <i class='fas fa-phone-alt' style='font-size:36px;color:red;'></i>
+                    </div>
+                    <div class="right">
+                        <h3>Excepteur sint</h3>
+                        <p>Lorem ipsum dolor sit amet conse ctecur voluptate velit esse cillum dollor.</p>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="left">
+                        <i class='far fa-credit-card' style='font-size:36px;color:red;'></i>
+                    </div>
+                    <div class="right">
+                        <h3>Occaecat cupidatat non</h3>
+                        <p>Lorem ipsum dolor sit amet conse ctecur voluptate velit esse cillum dollor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <h4>Custom Block</h4>
+                <h3>Lorem ipsum dolor sit amet conse ctecu</h3>
+                <p style="font-size: 13px;">Lorem ipsum dolor sit amet conse ctecur adipisicing elit, sed
+                     do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud 
+                     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                     coluptate velit esse cillum dolore eu fugiat nulla pariatu.
+                 </p>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="row">
+                <div class="footerc first">
+                    <div  class="flogo">
+                        <h1 style="font-size: 50px;color: rgb(243, 244, 245);">alcoholic</h1>
+                        <h3 style="color: darkgoldenrod;;">beverage store</h3>
+                    </div>
+                    <p style="font-size: 10px;text-align: center;margin-top: 40px;color: lightgrey;">My Company, 4578 Marmora Road, Glasgow D04 89GR</p>
+                    <div class="flogo" style="line-height: 0;margin-top: 0px;">
+                        <h5>call us now:1(234)567-9842</h5>
+                        <h6 style="color:red;font-size: xx-small;">EMAIL:INFO@DEMOLINK.ORG</h6>
+                    </div>
+                </div>
+                <div class="footerc second"></div>
+                <div class="footerc middle" style="text-transform: uppercase;color: lightgrey;">
+                    <h4>INFORMATIN</h4>
+                    <h6>specials</h6>
+                    <h6>new products</h6>
+                    <h6>best sellers</h6>
+                    <h6>our stores</h6>
+                    <h6>contact us</h6>
+                    <h6>pages configuration</h6>
+                    <h6>sitemap</h6>
+                </div>
+                <div class="footerc middle" style="text-transform: uppercase;color: lightgrey;">
+                    <h4>my account</h4>
+                    <h6>my orders</h6>
+                    <h6>my merchandise returns</h6>
+                    <h6>my credit slips</h6>
+                    <h6>my addresses</h6>
+                    <h6>my personal info</h6>
+                    <h6>my vouchers</h6>
+                    <h6>sigh out</h6>
+                </div>
+            </div>
+        </div>
+        <p ><i class="fa fa-copyright"></i>&nbsp;2014 Ecommerce software by Prestashop</p>
+    </div>
+    </div>
+    
+    </body>
+</html>
